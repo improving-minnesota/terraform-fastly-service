@@ -1,0 +1,7 @@
+locals {
+  global_domain_names = [
+    {
+      name = "${var.base_domain_prefix}.${var.base_domain_name}"
+    }
+  ]
+}

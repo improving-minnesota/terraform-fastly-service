@@ -1,0 +1,3 @@
+locals {
+  global_headers = []
+}

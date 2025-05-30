@@ -1,0 +1,10 @@
+---
+extends: default
+
+rules:
+  comments:
+    min-spaces-from-content: 1
+  comments-indentation: false
+  truthy:
+    check-keys: false
+  line-length: false
