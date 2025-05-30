@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2025-05-30)
+
+
+### Features
+
+* Initial Release ([c347d01](https://github.com/improving-minnesota/terraform-fastly-service/commit/c347d0136b000fee9c6123cfd87e05e88f35e143))
+
 ## [1.0.1](https://github.com/improving-minnesota/terraform-fastly-service/compare/v1.0.0...v1.0.1) (2025-05-29)
 
 
