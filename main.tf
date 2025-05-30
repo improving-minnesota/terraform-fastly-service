@@ -763,6 +763,15 @@ resource "fastly_service_vcl" "this" {
       type     = snippet.value.type
     }
   }
+
+  dynamic "vcl" {
+    for_each = var.fastly_vcls
+    content {
+      content = vcl.value.content
+      main    = vcl.value.main
+      name    = vcl.value.name
+    }
+  }
 }
 
 resource "fastly_service_acl_entries" "this" {
