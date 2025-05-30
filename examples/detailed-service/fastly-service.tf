@@ -20,4 +20,5 @@ module "fastly_service" {
   fastly_request_settings   = local.request_settings
   fastly_response_objects   = local.response_objects
   fastly_snippets           = local.snippets
+  fastly_vcls               = local.vcls
 }

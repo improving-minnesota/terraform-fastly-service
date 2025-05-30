@@ -618,3 +618,18 @@ variable "fastly_snippets" {
     error_message = "type must be one of: init, recv, hash, hit, miss, pass, fetch, error, deliver, log, none"
   }
 }
+
+variable "fastly_vcls" {
+  description = <<EOF
+  A list of VCLs to be added to the Fastly service. Each object in the list has the following attributes:
+  - content (String) The custom VCL code to upload.
+  - main (Boolean) A unique name for this configuration block. It is important to note that changing this attribute will delete and recreate the resource.
+  - name (String) If true, use this block as the main configuration. If false, use this block as an includable library. Only a single VCL block can be marked as the main block. Default false
+  EOF
+  type = list(object({
+    content = string
+    main    = optional(bool)
+    name    = string
+  }))
+  default = []
+}

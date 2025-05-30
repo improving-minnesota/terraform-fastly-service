@@ -1,5 +1,5 @@
 ## Overview
-[Improving](https://www.improving.com)'s [terraform-fastly-service](https://github.com/improving-minnesota/terraform-fastly-service/) is a demonstration Terraform module to abstract select configuration features of a Fastly service via the Terraform [Fastly provider](https://registry.terraform.io/providers/fastly/fastly/latest/docs). This module may not be maintained, nor fully-complete, and is provided as-is for demonstration purposes.
+[Improving](https://www.improving.com)'s [terraform-fastly-service](https://github.com/improving-minnesota/terraform-fastly-service/) is a Terraform module to abstract select configuration features of a Fastly service via the Terraform [Fastly provider](https://registry.terraform.io/providers/fastly/fastly/latest/docs). This module may not be maintained, nor fully-complete, and is provided as-is for demonstration purposes.
 
 See [examples](https://github.com/improving-minnesota/terraform-fastly-service/tree/main/examples) for usage with the following example scenarios:
 * simple-service
@@ -139,6 +139,7 @@ Implementing stored configuration via Terraform modules to drive your Fastly CDN
 | <a name="input_fastly_stage"></a> [fastly\_stage](#input\_fastly\_stage) | (Boolean) Conditionally enables new service versions to be staged. If set to true, all changes made by an apply step will be staged, even if apply did not create a new draft version. Default false | `bool` | `false` | no |
 | <a name="input_fastly_stale_if_error"></a> [fastly\_stale\_if\_error](#input\_fastly\_stale\_if\_error) | (Boolean) Enables serving a stale object if there is an error. Default true | `bool` | `true` | no |
 | <a name="input_fastly_stale_if_error_ttl"></a> [fastly\_stale\_if\_error\_ttl](#input\_fastly\_stale\_if\_error\_ttl) | (Number) The default time-to-live (TTL) for serving the stale object for the version | `number` | `43200` | no |
+| <a name="input_fastly_vcls"></a> [fastly\_vcls](#input\_fastly\_vcls) | A list of VCLs to be added to the Fastly service. Each object in the list has the following attributes:<br/>  - content (String) The custom VCL code to upload.<br/>  - main (Boolean) A unique name for this configuration block. It is important to note that changing this attribute will delete and recreate the resource.<br/>  - name (String) If true, use this block as the main configuration. If false, use this block as an includable library. Only a single VCL block can be marked as the main block. Default false | <pre>list(object({<br/>    content = string<br/>    main    = optional(bool)<br/>    name    = string<br/>  }))</pre> | `[]` | no |
 
 ## Outputs
 

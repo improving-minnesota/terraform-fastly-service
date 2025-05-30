@@ -1,5 +1,6 @@
 module "global_fastly_service" {
-  source               = "git::https://github.com/improving-minnesota/terraform-fastly-service/?ref=v1"
+  #source               = "git::https://github.com/improving-minnesota/terraform-fastly-service/?ref=v1"
+  source               = "../../../../../.."
   fastly_api_key       = var.fastly_api_key
   fastly_force_destroy = true
 
@@ -20,4 +21,5 @@ module "global_fastly_service" {
   fastly_request_settings   = local.request_settings
   fastly_response_objects   = local.response_objects
   fastly_snippets           = local.snippets
+  fastly_vcls               = local.vcls
 }
