@@ -1,5 +1,5 @@
 ## Overview
-[Improving](https://www.improving.com)'s [terraform-fastly-service](https://github.com/improving-minnesota/terraform-fastly-service/) is a demonstration Terraform module to abstract select configuration features of a Fastly service via the Terraform [Fastly provider](https://registry.terraform.io/providers/fastly/fastly/latest/docs). This module may not be maintained, fully-complete, and is provided as-is for demonstration purposes.
+[Improving](https://www.improving.com)'s [terraform-fastly-service](https://github.com/improving-minnesota/terraform-fastly-service/) is a demonstration Terraform module to abstract select configuration features of a Fastly service via the Terraform [Fastly provider](https://registry.terraform.io/providers/fastly/fastly/latest/docs). This module may not be maintained, nor fully-complete, and is provided as-is for demonstration purposes.
 
 See [examples](https://github.com/improving-minnesota/terraform-fastly-service/tree/main/examples) for usage with the following example scenarios:
 * simple-service
@@ -144,6 +144,6 @@ Implementing stored configuration via Terraform modules to drive your Fastly CDN
 
 | Name | Description |
 |------|-------------|
-| <a name="output_fastly_service_id"></a> [fastly\_service\_id](#output\_fastly\_service\_id) | n/a |
-| <a name="output_fastly_service_name"></a> [fastly\_service\_name](#output\_fastly\_service\_name) | n/a |
+| <a name="output_fastly_service_id"></a> [fastly\_service\_id](#output\_fastly\_service\_id) | The ID of the Fastly Service that was updated. |
+| <a name="output_fastly_service_name"></a> [fastly\_service\_name](#output\_fastly\_service\_name) | The name of the Fastly Service that was updated. |
 <!-- END_TF_DOCS -->
